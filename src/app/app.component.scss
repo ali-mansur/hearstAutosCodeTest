@@ -1,0 +1,39 @@
+
+$makeFontSize: 18px;
+$modelFontSize: 12px;
+$carAndModelsCompFontStyle: sans-serif;
+.carAndModels{
+
+	font-family: $carAndModelsCompFontStyle;
+
+	#appTilte
+
+	.make{
+		font-size: $makeFontSize;
+	}
+	.model{
+		font-size: $modelFontSize;
+	}
+
+	.lableCarMakeAndModel{
+		position: fixed; 
+		bottom: 20px; 
+		margin: 0px auto;
+		left: 0;
+		right: 0;
+		width: 100px;
+		background-color: #fff; 
+		padding: 10px 20px;
+	} 
+
+	.selections{
+		position: fixed; 
+		top: 20px; 
+		left: 40%; 
+		margin: 0px auto;
+		left: 0;
+		right: 0;
+		text-align: center;
+	} 
+}
+

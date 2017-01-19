@@ -1,0 +1,26 @@
+<div class="carAndModels">
+	<div class="selections">
+		<h4>{{title}}</h4>
+		<select name="role" [(ngModel)]="makeList" (change)="getCarMake($event.target.value)">
+			<option value="0"> -Select Make - </option>
+			<option *ngFor="let item of carMakeCompanies" [value]="item.maker.lable">
+				{{item.maker.lable}}
+			</option>
+		</select>
+
+		<select *ngIf="makeList !=0" name="role" [(ngModel)]="modelList" (change)="getModel($event.target.value)">
+			<option value="0">-Select Model-</option>
+			<option *ngFor="let model of modelsByCompany.models" [value]="model.lable">
+				{{model.lable}}
+			</option>
+		</select>
+	</div>
+
+	<div *ngIf="modelList !=0">
+		<div class="lableCarMakeAndModel">
+			<span class="make">{{makeList}}</span>
+			<span class="model">{{modelList}}</span>
+		</div>
+		<div ><img  width="100%" [src]="modelImgUrl"></div>
+	</div>
+<div>
